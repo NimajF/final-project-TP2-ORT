@@ -3,12 +3,15 @@ import sequelize from "./connection/connection.js";
 import bookRoutes from "./routes/bookRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 import loanRoutes from "./routes/loanRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
 
 const app = express();
 app.use(express.json());
 app.use("/api/books", bookRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/loans", loanRoutes);
+app.use("/api/auth", authRoutes);
+
 
 sequelize
   .sync({ force: false })
