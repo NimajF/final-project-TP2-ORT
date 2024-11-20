@@ -24,8 +24,12 @@ export const getUserById = async (req, res) => {
 
 export const createUser = async (req, res) => {
   try {
-    const user = await User.create(req.body);
-    res.status(201).json(user);
+    const existingUser = await User.findById(req.body.id);
+    if (existingUser) {
+      return res.status(409).json({ message: "User already exists" });
+    }
+    const newUser = await User.create(req.body);
+    res.status(201).json(newUser);
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
