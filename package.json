@@ -1,0 +1,22 @@
+{
+  "name": "final-project-ort-tp2",
+  "version": "1.0.0",
+  "description": "PROJECTO FINAL DE LA MATERIA TALLER DE PROGRAMACION INCLUYENDO LAS TECNOGLOGIAS NODE.JS, EXPRESS, SEQUILIZE Y MYSQL",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Haro, Francisco. Francisco, Benjamin. Lamnek, Juan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1",
+    "mysql2": "^3.11.4",
+    "sequelize": "^6.37.5"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.7",
+    "sequelize-cli": "^6.6.2"
+  }
+}
